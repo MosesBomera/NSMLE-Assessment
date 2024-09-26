@@ -2,6 +2,7 @@
 - `description_of_approach.md` contains a high level description of the modelling approach.
 - Notebook `002_How_To_Train_Model.ipynb` contains a step by step guide on how to train the model.
 - Notebook `001_Exploratory_Data_Analysis.ipynb` contains the approach I took for the exploratory data analysis.
+- `requirements.txt` contains the packages to install to run training modules.
 
 ### Training utilities in `train_utils` folder:
 
