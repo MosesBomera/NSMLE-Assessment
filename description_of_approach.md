@@ -44,12 +44,12 @@ The primary goal is to predict loan performance, specifically whether a loan wil
 ### Next Steps
 
 **Framing the ML task to find a reason to lend a business:**
-- Change the task to a regression task that predicts how much a business can manage to pay on time instead of how the loan will perform,
+- Change the task to a regression task that predicts how much a business can manage to pay on time instead of if a loan will be paid late,
 - This target can be calculated based on what the busines has historically managed to pay on time and within 15 days after the due date.
 
 **Error Analysis:**
 - Extensively analyse model errors to understand the causes and how to correct them to improve model performance.
-- Devise strategies to handle the extreme class imbalance that exists in the target.
+- Devise strategies to handle the extreme class imbalance that exists in the `paid_late` target i.e (97% False to 3% True).
 
 **Improve Feature Engineering:**
 - Extract mean feature metrics from all previous loan repayments, not just the last approved loan.
@@ -57,8 +57,12 @@ The primary goal is to predict loan performance, specifically whether a loan wil
 
 **Inference Pipeline Implementation:**
 - Implement the inference pipeline for making predictions in a production setting.
+- Pipeline will also be used when validating predictions on the provided test set.
 
-**Technical Improvements:**
-- Use Pydantic for variable data validation.
-- Include MLOps for model training.
-- Add tests for each function.
+**ML Workflow Managament Improvements:**
+- Include an ML experimentation management module such as mlflow.
+
+**Technical Improvements**
+- Convert train_utils into a pip installable module.
+- Add paramter, data validation using Pydantic.
+- Add unit tests to train utilities.
